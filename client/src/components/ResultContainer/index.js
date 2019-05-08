@@ -3,7 +3,7 @@ import './style.css'
 
 function ResultContainer(props) {
     return(
-        <p>Got it!</p>
+            <div>{props.children}</div>
     )
 }
 

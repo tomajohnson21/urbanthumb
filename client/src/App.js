@@ -2,6 +2,7 @@ import React from 'react';
 import Wrapper from './components/Wrapper';
 import Search from './components/Search';
 import ResultContainer from './components/ResultContainer';
+import ResultCard from './components/ResultCard'
 
 class App extends React.Component {
   
@@ -32,15 +33,18 @@ class App extends React.Component {
       fetch(url)
       .then(res => res.json())
       .then(
-        (result) => {
-          console.log(result)
+        (results) => {
+          console.log(results)
           this.setState({
-            hasResults: true
+            results
           })
+
+          if(this.state.results.length > 0){
+            this.setState({
+              hasResults: true
+            })
+          }
         },
-        // Note: it's important to handle errors here
-        // instead of a catch() block so that we don't swallow
-        // exceptions from actual bugs in components.
         (error) => {
           console.log(error)
         }
@@ -69,7 +73,15 @@ class App extends React.Component {
             name="search"
             value={this.state.search}
           />
-          <ResultContainer hasResults={this.state.hasResults} />
+          <ResultContainer>
+            {this.state.results.map(result =>
+            <ResultCard
+              key={this.state.results.indexOf(result)}
+              commonName={result.common_name}
+              scientificName={result.scientific_name}
+              href={result.link}
+            />)}
+          </ResultContainer>
         </Wrapper>
       )
     }

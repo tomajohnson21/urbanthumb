@@ -28,23 +28,15 @@ app.get("/api/search/:plant", (req, res) =>{
     axios.get(url).then(results => {
         
         let dataArr = results.data.filter(plant => plant.complete_data)
-        //console.log(respons)
-        //res.json(responseArr);
         
-        let responseArr = [];
-        //console.log(preciseURL);
+        //Capitalize first letter of common name for each plant in array
         dataArr.forEach(plant => {
-          
-          let specificURL = plant.link + "?token=bHVzQkE1UkJPTGFHVGVQUXdmL1JuQT09";
-          axios.get(specificURL).then(results => {
-          
-              results
-              responseArr.push(results.data.main_species);
-      
-          }).catch(err => res.status(422).json(err));
+          tempArr = plant.common_name.split("");
+          tempArr[0] = tempArr[0].toUpperCase();
+          newCommonName = tempArr.join("");
+          plant.common_name = newCommonName;
         })
-
-        res.json(responseArr);
+        res.json(dataArr);
     }).catch(err => res.status(422).json(err));
 })
 // Send every other request to the React app
