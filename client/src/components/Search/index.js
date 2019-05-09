@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Search(props) {
+function SearchForm(props) {
 
     return(
         <div className="md-form mt-0">
@@ -10,4 +10,4 @@ function Search(props) {
     )
 }
 
-export default  Search;
+export default SearchForm;
