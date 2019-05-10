@@ -1,6 +1,6 @@
 import React from 'react';
 import Wrapper from '../components/Wrapper';
-import SearchForm from '../components/Search';
+import SearchForm from '../components/SearchForm';
 import ResultContainer from '../components/ResultContainer';
 import ResultCard from '../components/ResultCard'
 

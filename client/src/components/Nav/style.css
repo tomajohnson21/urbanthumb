@@ -1,0 +1,27 @@
+.navbar {
+
+    background: darkolivegreen;
+    height: 90px;
+    min-height: 70px;
+    width: 100%;
+    color: #ffffff;
+    box-shadow: 14px, 20px, 10px, 0, black;
+}
+.navbar ul{
+    
+    width: 100%
+}
+.navbar li {
+
+    display: inline-block;
+    padding: 26px 0px;
+    width: 33.3%;
+    text-align: center;
+}
+
+.navbar a { 
+
+    color: white;
+    font-size: 1.5em;
+    font-style: bold;
+}
