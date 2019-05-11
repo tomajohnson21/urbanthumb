@@ -1,6 +1,7 @@
 import React from 'react';
 import Wrapper from '../components/Wrapper';
 import SearchForm from '../components/SearchForm';
+import Modal from '../components/Modal'
 import ResultContainer from '../components/ResultContainer';
 import ResultCard from '../components/ResultCard'
 
@@ -9,8 +10,17 @@ class Search extends React.Component {
   state = {
     
     hasResults: false,
+    showResults: false,
     search: "",
     results: []
+  }
+
+  showModal = () => {
+    this.setState({ showResults: true });
+  }
+  
+  hideModal = () => {
+    this.setState({ showResults: false });
   }
 
   updateSearchTerm = (event) => {
@@ -73,15 +83,17 @@ class Search extends React.Component {
             name="search"
             value={this.state.search}
           />
-          <ResultContainer>
-            {this.state.results.map(result =>
-            <ResultCard
-              key={this.state.results.indexOf(result)}
-              commonName={result.common_name}
-              scientificName={result.scientific_name}
-              href={result.link}
-            />)}
-          </ResultContainer>
+          <Modal>
+            <ResultContainer>
+              {this.state.results.map(result =>
+              <ResultCard
+                key={this.state.results.indexOf(result)}
+                commonName={result.common_name}
+                scientificName={result.scientific_name}
+                href={result.link}
+              />)}
+            </ResultContainer>
+          </Modal>
         </Wrapper>
       )
     }
