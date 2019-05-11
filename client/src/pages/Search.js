@@ -76,9 +76,14 @@ class Search extends React.Component {
             name="search"
             value={this.state.search}
           />
-          <Modal>
+          <Modal
+            handleClose={this.hideModal}
+            show={this.state.showResults}
+          >
             <ResultContainer>
-              <ResultFail />
+              <ResultFail 
+                search={this.state.search}
+              />
             </ResultContainer>
           </Modal>
         </Wrapper>
@@ -92,7 +97,9 @@ class Search extends React.Component {
             name="search"
             value={this.state.search}
           />
-          <Modal>
+          <Modal
+          handleClose={this.hideModal}
+          show={this.state.showResults}>
             <ResultContainer>
               {this.state.results.map(result =>
               <ResultCard

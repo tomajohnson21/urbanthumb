@@ -1,15 +1,15 @@
 import React from "react";
 import "./style.css"
 
-function Modal({ handleClose, show, children }) {
-    const showHideClassName = show ? 'modal display-block' : 'modal display-none';
+function Modal(props) {
+    const showHideClassName = props.show ? 'modal display-block' : 'modal display-none';
 
     return (
       <div className={showHideClassName}>
         <section className='modal-main'>
-          {children}
+          {props.children}
           <button
-            onClick={handleClose}
+            onClick={props.handleClose}
           >
             Close
           </button>

@@ -4,7 +4,7 @@ function ResultFail(props){
 
     return(
         <div className='jumbotron'>
-            <h2>Sorry, we couldn't find anything for '{props.search}' in our database :(</h2>
+            <h2>Sorry, '{props.search}' either doesn't exist in our database, or the data is incomplete :(</h2>
         </div>
     )
 }

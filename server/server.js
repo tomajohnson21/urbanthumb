@@ -37,7 +37,7 @@ app.get("/api/search/:plant", (req, res) =>{
           plant.common_name = newCommonName;
 
           let speciesUrl = "http://trefle.io/api/plants" + plant.id + "?token=bHVzQkE1UkJPTGFHVGVQUXdmL1JuQT09"
-          axios.get(speciesUrl).then(speciesResults => console.log(speciesResults))
+          axios.get(speciesUrl).then(speciesResults => console.log(speciesResults)).catch(err => console.log(err))
         })
         res.json(dataArr);
     }).catch(err => res.status(422).json(err));
