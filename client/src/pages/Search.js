@@ -1,16 +1,27 @@
 import React from 'react';
 import Wrapper from '../components/Wrapper';
 import SearchForm from '../components/SearchForm';
+import Modal from '../components/Modal'
 import ResultContainer from '../components/ResultContainer';
-import ResultCard from '../components/ResultCard'
+import ResultCard from '../components/ResultCard';
+import ResultFail from '../components/ResultFail';
 
 class Search extends React.Component {
   
   state = {
     
     hasResults: false,
+    showResults: false,
     search: "",
     results: []
+  }
+
+  showModal = () => {
+    this.setState({ showResults: true });
+  }
+  
+  hideModal = () => {
+    this.setState({ showResults: false });
   }
 
   updateSearchTerm = (event) => {
@@ -44,6 +55,8 @@ class Search extends React.Component {
               hasResults: true
             })
           }
+
+          this.showModal();
         },
         (error) => {
           console.log(error)
@@ -55,15 +68,26 @@ class Search extends React.Component {
   render(){
 
     if(!this.state.hasResults){
-      return (
+      return(
         <Wrapper>
-          <SearchForm fetchData={this.fetchData}
+          <SearchForm
+            fetchData={this.fetchData}
             updateSearchTerm={this.updateSearchTerm}
             name="search"
             value={this.state.search}
           />
+          <Modal
+            handleClose={this.hideModal}
+            show={this.state.showResults}
+          >
+            <ResultContainer>
+              <ResultFail 
+                search={this.state.search}
+              />
+            </ResultContainer>
+          </Modal>
         </Wrapper>
-      );
+      )
     } else {
       return (
         <Wrapper>
@@ -73,21 +97,23 @@ class Search extends React.Component {
             name="search"
             value={this.state.search}
           />
-          <ResultContainer>
-            {this.state.results.map(result =>
-            <ResultCard
-              key={this.state.results.indexOf(result)}
-              commonName={result.common_name}
-              scientificName={result.scientific_name}
-              href={result.link}
-            />)}
-          </ResultContainer>
+          <Modal
+          handleClose={this.hideModal}
+          show={this.state.showResults}>
+            <ResultContainer>
+              {this.state.results.map(result =>
+              <ResultCard
+                key={this.state.results.indexOf(result)}
+                commonName={result.common_name}
+                scientificName={result.scientific_name}
+                href={result.link}
+              />)}
+            </ResultContainer>
+          </Modal>
         </Wrapper>
       )
     }
-
-}
-
+  }
 }
 
 export default Search;
