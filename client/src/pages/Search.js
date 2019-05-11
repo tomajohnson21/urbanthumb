@@ -3,7 +3,8 @@ import Wrapper from '../components/Wrapper';
 import SearchForm from '../components/SearchForm';
 import Modal from '../components/Modal'
 import ResultContainer from '../components/ResultContainer';
-import ResultCard from '../components/ResultCard'
+import ResultCard from '../components/ResultCard';
+import ResultFail from '../components/ResultFail';
 
 class Search extends React.Component {
   
@@ -54,6 +55,8 @@ class Search extends React.Component {
               hasResults: true
             })
           }
+
+          this.showModal();
         },
         (error) => {
           console.log(error)
@@ -65,15 +68,21 @@ class Search extends React.Component {
   render(){
 
     if(!this.state.hasResults){
-      return (
+      return(
         <Wrapper>
-          <SearchForm fetchData={this.fetchData}
+          <SearchForm
+            fetchData={this.fetchData}
             updateSearchTerm={this.updateSearchTerm}
             name="search"
             value={this.state.search}
           />
+          <Modal>
+            <ResultContainer>
+              <ResultFail />
+            </ResultContainer>
+          </Modal>
         </Wrapper>
-      );
+      )
     } else {
       return (
         <Wrapper>
@@ -97,9 +106,7 @@ class Search extends React.Component {
         </Wrapper>
       )
     }
-
-}
-
+  }
 }
 
 export default Search;
