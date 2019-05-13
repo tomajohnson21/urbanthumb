@@ -1,8 +1,4 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Nav from '../components/Nav/index';
-import Button from 'react-bootstrap/Button';
-import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
 import LoginModal from '../components/LoginModal/index';
 import Wrapper from '../components/Wrapper';
 import ControlledCarousel from '../components/Carousel';

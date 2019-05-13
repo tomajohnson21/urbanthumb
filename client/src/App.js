@@ -3,10 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Search from './pages/Search';
 import NoMatch from './pages/NoMatch';
 import Nav from './components/Nav';
-import Button from 'react-bootstrap/Button';
-import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
 import Home from '../src/pages/Home';
-import LoginModal from './components/LoginModal/index';
 import FooterPage from './components/Footer/index';
 
 class App extends React.Component {
