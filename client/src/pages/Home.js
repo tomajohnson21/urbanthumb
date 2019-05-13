@@ -21,8 +21,7 @@ class Home extends React.Component {
                 
                 <ControlledCarousel />
 
-                <LoginModal />
-                <SignUpModal />
+                
             </Wrapper>
         )
     }
