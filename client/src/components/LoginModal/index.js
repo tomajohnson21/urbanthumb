@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import "./style.css";
 
 export default class LoginModal extends React.Component {
   constructor(props) {
@@ -37,7 +38,6 @@ export default class LoginModal extends React.Component {
     return (
 
         <div>
-        <Button color="success" onClick={this.toggle}>Login</Button>
         <Modal isOpen={this.state.modal}>
         <form onSubmit={this.handleSubmit}>
           <ModalHeader>Login</ModalHeader>
@@ -67,6 +67,10 @@ export default class LoginModal extends React.Component {
           </ModalFooter>
           </form>
         </Modal>
+        <div className="row buttonRow">
+        <div className="col-2"></div>
+        <Button className='loginButton col-8' onClick={this.toggle}>Login</Button>
+        </div>
         </div>
       
     );
