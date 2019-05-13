@@ -7,6 +7,7 @@ import Button from 'react-bootstrap/Button';
 import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
 import Home from '../src/pages/Home';
 import LoginModal from './components/LoginModal/index';
+import FooterPage from './components/Footer/index';
 
 class App extends React.Component {
 
@@ -23,15 +24,13 @@ class App extends React.Component {
           <div>
             <Nav />
             <Switch>
-              <Route exact path="/" comoponent={Home} />
+              <Route exact path="/" component={Home} />
               <Route exact path="/search" component={Search}/>
               <Route component={NoMatch} />
             </Switch>
           </div>
         </Router>
-        <div className="App">
-                    <LoginModal />
-                </div>
+        <FooterPage />
       </div>
       
 

@@ -4,8 +4,10 @@ import Nav from '../components/Nav/index';
 import Button from 'react-bootstrap/Button';
 import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
 import LoginModal from '../components/LoginModal/index';
+import Wrapper from '../components/Wrapper';
+import ControlledCarousel from '../components/Carousel';
 
-export default class Home extends React.Component {
+class Home extends React.Component {
 
     constructor(props) {
         super(props);
@@ -15,15 +17,18 @@ export default class Home extends React.Component {
       }
     render() {
         return (
-            <div>
-                <div>
-                    <Nav></Nav>
-                </div>
-                <div className="App">
-                    <LoginModal />
-                </div>
-            </div>
+            <Wrapper>
+
+                <h1>Title</h1>
+                <h5><i>slogan or more filler text.....</i></h5>
+                
+                <ControlledCarousel />
+
+                <LoginModal />
+            </Wrapper>
         )
     }
 
 }
+
+export default Home;
