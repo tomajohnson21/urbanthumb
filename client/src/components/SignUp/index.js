@@ -3,7 +3,7 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import "./style.css";
 import { FacebookLoginButton } from 'react-social-login-buttons';
 
-export default class LoginModal extends React.Component {
+export default class SignUpModal extends React.Component {
   constructor(props) {
     super(props);
     this.state = { modal: true,name: '',email :'' ,password: ''};
@@ -41,7 +41,7 @@ export default class LoginModal extends React.Component {
         <div>
         <Modal isOpen={this.state.modal}>
         <form onSubmit={this.handleSubmit}>
-          <ModalHeader>Login</ModalHeader>
+          <ModalHeader>Sign up</ModalHeader>
           <ModalBody>
           <div className="row">
             <div className="form-group col-md-4">
@@ -64,7 +64,7 @@ export default class LoginModal extends React.Component {
           </ModalBody>
           <ModalFooter>
             <div>
-            Don't have an account? <a href='/signup'> Sign up </a>
+            Already have an account? <a href='/login'> Log in </a>
             </div>
             <input type="submit" value="Submit" color="primary" className="btn btn-primary" />
             <Button color="danger" onClick={this.toggle}>Cancel</Button>
@@ -72,10 +72,6 @@ export default class LoginModal extends React.Component {
           <FacebookLoginButton />
           </form>
         </Modal>
-        {/* <div className="row buttonRow">
-        <div className="col-2"></div>
-        <Button className='loginButton col-8' onClick={this.toggle}>Login</Button>
-        </div> */}
         </div>
       
     );
