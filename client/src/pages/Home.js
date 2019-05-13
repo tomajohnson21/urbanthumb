@@ -2,6 +2,7 @@ import React from 'react';
 import LoginModal from '../components/LoginModal/index';
 import Wrapper from '../components/Wrapper';
 import ControlledCarousel from '../components/Carousel';
+import SignUpModal from '../components/SignUp/index';
 
 class Home extends React.Component {
 
@@ -21,6 +22,7 @@ class Home extends React.Component {
                 <ControlledCarousel />
 
                 <LoginModal />
+                <SignUpModal />
             </Wrapper>
         )
     }

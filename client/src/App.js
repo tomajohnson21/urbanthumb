@@ -6,6 +6,7 @@ import TopNav from './components/Nav';
 import Home from '../src/pages/Home';
 import FooterPage from './components/Footer/index';
 import LoginModal from './components/LoginModal';
+import SignUpModal from './components/SignUp/index';
 
 class App extends React.Component {
 
@@ -25,6 +26,7 @@ class App extends React.Component {
               <Route exact path="/" component={Home} />
               <Route exact path="/search" component={Search}/>
               <Route exact path="/login" component={LoginModal}/>
+              <Route exact path='/signup' component={SignUpModal}/>
               <Route component={NoMatch} />
             </Switch>
           </div>
