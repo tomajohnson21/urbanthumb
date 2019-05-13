@@ -23,23 +23,22 @@ if (process.env.NODE_ENV === "production") {
 // Define API routes here
 app.get("/api/search/:plant", (req, res) =>{
 
-    let url = "http://trefle.io/api/plants?token=bHVzQkE1UkJPTGFHVGVQUXdmL1JuQT09&q=" + req.params.plant;
+    let url = "http://trefle.io/api/plants?token=bHVzQkE1UkJPTGFHVGVQUXdmL1JuQT09&common_name=" + req.params.plant +"&page_size=5";
 
     axios.get(url).then(results => {
         
-        let dataArr = results.data.filter(plant => plant.complete_data)
-        
-        //Capitalize first letter of common name for each plant in array
-        dataArr.forEach(plant => {
+        console.log(results)
+        let resArr = results.data
+        console.log(resArr)
+        //Capitalize first letter of common name for each plant
+        resArr.forEach(plant => {
           tempArr = plant.common_name.split("");
           tempArr[0] = tempArr[0].toUpperCase();
           newCommonName = tempArr.join("");
           plant.common_name = newCommonName;
-
-          let speciesUrl = "http://trefle.io/api/plants" + plant.id + "?token=bHVzQkE1UkJPTGFHVGVQUXdmL1JuQT09"
-          axios.get(speciesUrl).then(speciesResults => console.log(speciesResults)).catch(err => console.log(err))
         })
-        res.json(dataArr);
+
+        res.json(resArr);
     }).catch(err => res.status(422).json(err));
 })
 // Send every other request to the React app

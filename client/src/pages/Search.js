@@ -32,6 +32,12 @@ class Search extends React.Component {
     })
   }
 
+  handlePlantClick = (plant) => {
+
+    
+    console.log(plant);
+  }
+
   fetchData = (event) => {
 
     event.preventDefault();
@@ -45,7 +51,6 @@ class Search extends React.Component {
       .then(res => res.json())
       .then(
         (results) => {
-          console.log(results)
           this.setState({
             results
           })
@@ -68,6 +73,7 @@ class Search extends React.Component {
   render(){
 
     if(!this.state.hasResults){
+      
       return(
         <Wrapper>
           <SearchForm
@@ -89,6 +95,7 @@ class Search extends React.Component {
         </Wrapper>
       )
     } else {
+
       return (
         <Wrapper>
           <SearchForm
@@ -104,7 +111,10 @@ class Search extends React.Component {
               {this.state.results.map(result =>
               <ResultCard
                 key={this.state.results.indexOf(result)}
+                handlePlantClick={this.handlePlantClick}
+                //plantInfo = {result}
                 commonName={result.common_name}
+                completeData={result.complete_data}
                 scientificName={result.scientific_name}
                 href={result.link}
               />)}
