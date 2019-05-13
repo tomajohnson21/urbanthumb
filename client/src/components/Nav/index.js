@@ -1,22 +1,38 @@
 import React from "react";
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 import './style.css';
 
-function Nav() {
-  
+function TopNav() {
+
     return (
-    <nav className="navbar navbar-expand-lg navbar-dark">
-      
-        <ul>
-            <li>
-                <a className="navbar-brand" href="/">
-                    UrbanThumb
-                </a>
-            </li>
-          <a href="/search">Search</a>
-          <li>My Plants</li>
-      </ul>
-    </nav>
+
+        <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className='navbar'>
+            <Navbar.Brand href="/">UrbanThumb</Navbar.Brand>
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+            <Navbar.Collapse id="responsive-navbar-nav">
+                <Nav className="mr-auto">
+                    <Nav.Link href="/search">Search</Nav.Link>
+                    <Nav.Link href="/profile">Profile</Nav.Link>
+                    <Nav.Link href="/login">Log in</Nav.Link>
+                    <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
+                        <NavDropdown.Item href="#action/3.1">My Plants</NavDropdown.Item>
+                        <NavDropdown.Item href="#action/3.2">Photo ID</NavDropdown.Item>
+                        <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                        <NavDropdown.Divider />
+                        <NavDropdown.Item href="#action/3.4">Log out</NavDropdown.Item>
+                    </NavDropdown>
+                </Nav>
+                <Nav>
+                    <Nav.Link href="#deets">More deets</Nav.Link>
+                    <Nav.Link eventKey={2} href="#memes">
+                        Dank memes
+                    </Nav.Link>
+                </Nav>
+            </Navbar.Collapse>
+        </Navbar>
     );
 }
 
-export default Nav;
+export default TopNav;

@@ -2,9 +2,10 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Search from './pages/Search';
 import NoMatch from './pages/NoMatch';
-import Nav from './components/Nav';
+import TopNav from './components/Nav';
 import Home from '../src/pages/Home';
 import FooterPage from './components/Footer/index';
+import LoginModal from './components/LoginModal';
 
 class App extends React.Component {
 
@@ -19,10 +20,11 @@ class App extends React.Component {
       <div>
         <Router>
           <div>
-            <Nav />
+            <TopNav />
             <Switch>
               <Route exact path="/" component={Home} />
               <Route exact path="/search" component={Search}/>
+              <Route exact path="/login" component={LoginModal}/>
               <Route component={NoMatch} />
             </Switch>
           </div>
