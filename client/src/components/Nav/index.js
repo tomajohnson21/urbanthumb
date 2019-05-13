@@ -9,10 +9,10 @@ function Nav() {
         <ul>
             <li>
                 <a className="navbar-brand" href="/">
-                    urban thumb
+                    UrbanThumb
                 </a>
             </li>
-          <li>Search</li>
+          <a href="/search">Search</a>
           <li>My Plants</li>
       </ul>
     </nav>
