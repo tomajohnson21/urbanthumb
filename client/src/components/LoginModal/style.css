@@ -1,0 +1,11 @@
+.loginButton {
+    background-color:khaki;
+    color: black;
+    text-align: center;
+    align: center;
+}
+
+.buttonRow {
+    bottom: 0;
+    clear: both;
+}
