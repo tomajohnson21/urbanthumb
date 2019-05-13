@@ -47,7 +47,8 @@ class Search extends React.Component {
     } else {
       const url = "http://localhost:3001/api/search/" + this.state.search;
 
-      fetch(url)
+      fetch(url,
+        {method: "GET"})
       .then(res => res.json())
       .then(
         (results) => {
