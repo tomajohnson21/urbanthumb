@@ -37,6 +37,7 @@ section {
 }
 
 .card {
+    font-family: 'Lato', 'Roboto', Arial, Helvetica, sans-serif;
     color: white;
     margin-top: 20px;
     margin-bottom: 20px; 
@@ -53,6 +54,7 @@ section {
 
 .fa {
     color:white;
+    margin-top:10px;
     background:rgba(255,255,255, 0.3);
     padding: 13px;
     font-size: 40px;
