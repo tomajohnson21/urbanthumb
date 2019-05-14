@@ -3,9 +3,10 @@ const Schema = mongoose.Schema;
 
 const plantSchema = new Schema({
   common_name: { type: String, required: true },
-  scientific_name: { type: String, required: true },
+  scientific_name: String,
   water: String,
-  sunlight: String,
+  shade_tolerance: String,
+  growth_period: String,
   toxicity: String,
   date: { type: Date, default: Date.now }
 });

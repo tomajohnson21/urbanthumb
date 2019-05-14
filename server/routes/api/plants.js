@@ -3,10 +3,12 @@ const plantController = require("../../controllers/plantController");
 
 router.route("/")
   .get(plantController.findAll)
+  .post(plantController.create)
 
 router.route("/:trefl_id")
   .post(plantController.createBySearch);
-// Matches with "/api/books/:id"
+
+  // Matches with "/api/books/:id"
 router.route("/:id")
   .get(plantController.findById)
   .put(plantController.update)
