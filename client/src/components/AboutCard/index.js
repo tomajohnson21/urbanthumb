@@ -13,10 +13,10 @@ export default class AboutCard extends React.Component {
         return (
             // <div>
             // <img src={Urbanthumbfinallogo} alt='Logo' />
-            
+
             <Card className='container aboutContainer'>
                 <div className='row this'>
-                <div className='col card'>
+                    <div className='col card'>
                         <div>
                             <img className='aboutImg' variant="top" src={Tom} alt="Tom" />
                             <div>
@@ -25,10 +25,11 @@ export default class AboutCard extends React.Component {
                                     Some quick example text to build on the card title and make up the bulk of
                                     the card's content.
                         </div>
-                                <Button variant="primary">Go somewhere</Button>
+                                <a href="#" class="fa fa-github aboutLinks"></a>
+                                <a href="#" class="fa fa-linkedin aboutLinks"></a>
                             </div>
                         </div>
-                </div>
+                    </div>
                     <div className='col card'>
                         <div>
                             <img className='aboutImg' variant="top" src={Sheima} alt="Sheima" />
@@ -38,11 +39,12 @@ export default class AboutCard extends React.Component {
                                     Some quick example text to build on the card title and make up the bulk of
                                     the card's content.
                         </div>
-                                <Button variant="primary">Go somewhere</Button>
+                                <a href="#" class="fa fa-github aboutLinks"></a>
+                                <a href="#" class="fa fa-linkedin aboutLinks"></a>
                             </div>
                         </div>
-                </div>
-                <div className='col card'>
+                    </div>
+                    <div className='col card'>
                         <div>
                             <img className='aboutImg' variant="top" src={Kevin} alt="Sheima" />
                             <div>
@@ -51,14 +53,15 @@ export default class AboutCard extends React.Component {
                                     Some quick example text to build on the card title and make up the bulk of
                                     the card's content.
                         </div>
-                                <Button variant="primary">Go somewhere</Button>
+                                <a href="#" class="fa fa-github aboutLinks"></a>
+                                <a href="#" class="fa fa-linkedin aboutLinks"></a>
                             </div>
                         </div>
+                    </div>
                 </div>
-                </div>
-                </Card>
-                // </div>
-            
+            </Card>
+            // </div>
+
         )
     }
 }
