@@ -4,6 +4,7 @@
     background-attachment: fixed; 
     box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .1);
     background: rgba(7, 26, 40, 3);
+    overflow:hidden;
     
     border: solid;
 
@@ -17,7 +18,7 @@
     right: 0;
     bottom:0;
     box-shadow: inset 0 0 2000px rgba(255, 255,255,.01);
-    filter:blur(1px);
+    filter:blur(10px);
     border: solid;
 }
 
