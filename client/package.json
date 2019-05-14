@@ -2,6 +2,7 @@
   "name": "urbanthumb",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:3001/",
   "dependencies": {
     "mdbreact": "^4.13.0",
     "react": "^16.8.6",
@@ -9,6 +10,7 @@
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.0",
     "react-scripts": "3.0.0",
+    "react-social-login-buttons": "^2.3.1",
     "reactstrap": "^8.0.0",
     "redux": "^4.0.1"
   },

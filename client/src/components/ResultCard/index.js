@@ -8,7 +8,9 @@ function ResultCard(props) {
             <div className="card">
                 <h3>{props.commonName}</h3>
                 <h5><i>{props.scientificName}</i></h5>
-                <button className={buttonClass} onClick={() => props.handlePlantClick(props.commonName)}>Save</button>
+                <button className={buttonClass} onClick={() => props.handlePlantClick(props.commonName)}>
+                    {props.completeData ? "Save" : "Incomplete Data"}
+                </button>
             </div>
         )
 }
