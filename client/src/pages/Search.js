@@ -45,7 +45,7 @@ class Search extends React.Component {
     if(!this.state.search){
       console.log("No search term :(")
     } else {
-      const url = "http://localhost:3001/api/search/" + this.state.search;
+      const url = "/api/search/" + this.state.search;
 
       fetch(url,
         {method: "GET"})

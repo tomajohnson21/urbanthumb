@@ -27,6 +27,8 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
+mongoose.connect("mongodb://localhost/urbanthumb", { useNewUrlParser: true });
+
 app.listen(PORT, () => {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
 });
