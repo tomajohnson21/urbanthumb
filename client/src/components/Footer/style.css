@@ -1,8 +1,7 @@
 .bgd {
     bottom: 0;
-    
-    position: fixed;
-    background-color:#FFDC00;
+    position:fixed;
+    background-color:rgb(255, 194, 14);
     width:100%;
-    max-height: 150px;
+    max-height: 75px;
 }

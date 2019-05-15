@@ -1,15 +1,19 @@
 .navbar {
-    background:#FFDC00;
-    background-color: #FFDC00!important;
+    background:rgb(255, 194, 14);
+    background-color: rgb(255, 194, 14)!important;
     color:black;
     
 }
 nav {
-    background: #FFDC00;
+    background: rgb(255, 194, 14);
 }
 .nav-link {
     color:black!important;
 }
 .navbar-brand {
     color:black!important;
+}
+.navImg {
+    width:100px;
+    height:100px;
 }

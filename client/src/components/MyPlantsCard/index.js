@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 import '../MyPlantsCard/style.css';
-import rosetest from '../Carousel/images/rosetest.jpg';
+import rosetest from '../../assets/rosetest.jpg';
 
 
 function MyPlantsCard(props) {
