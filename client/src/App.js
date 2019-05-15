@@ -7,6 +7,8 @@ import Home from '../src/pages/Home';
 import FooterPage from './components/Footer/index';
 import LoginModal from './components/LoginModal';
 import SignUpModal from './components/SignUp/index';
+import About from './pages/About';
+import MyPlants from './pages/MyPlants';
 
 class App extends React.Component {
 
@@ -27,6 +29,8 @@ class App extends React.Component {
               <Route exact path="/search" component={Search}/>
               <Route exact path="/login" component={LoginModal}/>
               <Route exact path='/signup' component={SignUpModal}/>
+              <Route exact path='/about' component={About}/>
+              <Route exact path='/myplants' component={MyPlants}/>
               <Route component={NoMatch} />
             </Switch>
           </div>

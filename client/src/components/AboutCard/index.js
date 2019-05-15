@@ -1,10 +1,9 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
 import '../AboutCard/style.css';
-import Kevin from './Kevin.png';
-import Sheima from './Sheima.png';
-import Tom from './Tom.png';
+import Kevin from '../../assets/Kevin.png';
+import Sheima from '../../assets/Sheima.png';
+import Tom from '../../assets/Tom.png';
 // import Urbanthumbfinallogo from './Urbanthumbfinallogo.png';
 
 export default class AboutCard extends React.Component {
@@ -25,8 +24,8 @@ export default class AboutCard extends React.Component {
                                     Some quick example text to build on the card title and make up the bulk of
                                     the card's content.
                         </div>
-                                <a href="#" class="fa fa-github aboutLinks"></a>
-                                <a href="#" class="fa fa-linkedin aboutLinks"></a>
+                                <a href="https://www.github.com" target="_blank" className="fa fa-github"></a>
+                                <a href="https://www.linkedin.com/" target="_blank" className="fa fa-linkedin"></a>
                             </div>
                         </div>
                     </div>
@@ -39,8 +38,8 @@ export default class AboutCard extends React.Component {
                                     Some quick example text to build on the card title and make up the bulk of
                                     the card's content.
                         </div>
-                                <a href="#" class="fa fa-github aboutLinks"></a>
-                                <a href="#" class="fa fa-linkedin aboutLinks"></a>
+                                <a href="https://www.github.com" target="_blank" className="fa fa-github"></a>
+                                <a href="https://www.linkedin.com/" target="_blank" className="fa fa-linkedin"></a>
                             </div>
                         </div>
                     </div>
@@ -53,8 +52,8 @@ export default class AboutCard extends React.Component {
                                     Some quick example text to build on the card title and make up the bulk of
                                     the card's content.
                         </div>
-                                <a href="#" class="fa fa-github aboutLinks"></a>
-                                <a href="#" class="fa fa-linkedin aboutLinks"></a>
+                                <a href="https://www.github.com" target="_blank" className="fa fa-github"></a>
+                                <a href="https://www.linkedin.com/" target="_blank" className="fa fa-linkedin"></a>
                             </div>
                         </div>
                     </div>

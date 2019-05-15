@@ -3,13 +3,14 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import './style.css';
+import Urbanthumbfinallogo from '../../assets/Urbanthumbfinallogo.png';
 
 function TopNav() {
 
     return (
 
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className='navbar'>
-            <Navbar.Brand href="/">UrbanThumb</Navbar.Brand>
+            <Navbar.Brand><a href="/"><img className='navImg' src={Urbanthumbfinallogo} alt="UrbanThumb" /></a> </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="mr-auto">
@@ -17,9 +18,9 @@ function TopNav() {
                     <Nav.Link href="/profile">Profile</Nav.Link>
                     <Nav.Link href="/login">Log in</Nav.Link>
                     <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-                        <NavDropdown.Item href="#action/3.1">My Plants</NavDropdown.Item>
+                        <NavDropdown.Item href="/myplants">My Plants</NavDropdown.Item>
                         <NavDropdown.Item href="#action/3.2">Photo ID</NavDropdown.Item>
-                        <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                        <NavDropdown.Item href="/about">About</NavDropdown.Item>
                         <NavDropdown.Divider />
                         <NavDropdown.Item href="#action/3.4">Log out</NavDropdown.Item>
                     </NavDropdown>
