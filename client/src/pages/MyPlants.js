@@ -1,41 +1,64 @@
 import React from 'react';
-import Card from 'react-bootstrap/Card';
 import rosetest from '../assets/rosetest.jpg';
 import MyPlantCard from '../components/MyPlantsCard';
 import Wrapper from '../components/Wrapper';
+import NoPlants from '../components/NoPlants';
 
 class MyPlants extends React.Component {
     
     state = {
 
         hasResults: false,
-        // showResults: false,
-        // search: "",
-        results: [
-            {
-                commonName: "Rose",
-                latinName: "Plebeus Rosius",
-                image: { rosetest },
-                description: "this is a rose this is a rose this is a rose this is a rose this is a rose this is a rose this is a rose this is a rose this is a rose this is a rose this is a rose",
+        results: []
+    }
 
+    componentDidMount() {
+        
+        this.loadPlants();
+    }
+
+    loadPlants = () => {
+
+        fetch("/api/plants",
+        {method: "GET"})
+        .then(res => res.json)
+        .then((results) => {
+            this.setState({
+              results
+            })
+  
+            if(this.state.results.length > 0){
+              this.setState({
+                hasResults: true
+              })
             }
-        ],
+          },
+          (error) => {
+            console.log(error)
+          }
+        )
     }
 
     render() {
 
-        if (!this.state.hasResults) {
+        if (this.state.hasResults) {
             return (
                 <Wrapper>
                     {this.state.results.map(results =>
                     <MyPlantCard
-                    commonName={results.commonName} 
-                    latinName={results.latinName}
-                    image={results.image}
-                    description={results.description}
+                        commonName={results.commonName} 
+                        latinName={results.latinName}
+                        image={results.image}
+                        description={results.description}
                     />)}
                 </Wrapper>
 
+            )
+        } else {
+            return (
+                <Wrapper>
+                    <NoPlants />
+                </Wrapper>
             )
         }
     }

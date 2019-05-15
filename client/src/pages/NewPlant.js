@@ -5,6 +5,7 @@ import Modal from '../components/Modal'
 import ResultContainer from '../components/ResultContainer';
 import ResultCard from '../components/ResultCard';
 import ResultFail from '../components/ResultFail';
+import PlantForm from '../components/PlantForm';
 
 class Search extends React.Component {
   
@@ -13,6 +14,11 @@ class Search extends React.Component {
     hasResults: false,
     showResults: false,
     search: "",
+    common_name: "",
+    scientific_name: "",
+    water: "",
+    shade_tolerance: "",
+    toxicity: "",
     results: []
   }
 
@@ -24,12 +30,27 @@ class Search extends React.Component {
     this.setState({ showResults: false });
   }
 
-  updateSearchTerm = (event) => {
+  handleChange = (event) => {
 
-    const {name, value} = event.target
+    const {name, value} = event.target;
+
     this.setState({
       [name]: value
-    })
+    });
+  }
+
+  submitPlant = (event) => {
+
+      event.preventDefault();
+    
+      let newPlant = {
+        common_name: this.state.common_name,
+        scientific_name: this.state.scientific_name,
+        water: this.state.water,
+        shade_tolerance: this.state.shade_tolerance,
+        toxicity: this.state.toxicity
+      }
+      console.log(newPlant);
   }
 
   handlePlantClick = (plant) => {
@@ -45,7 +66,8 @@ class Search extends React.Component {
     if(!this.state.search){
       console.log("No search term :(")
     } else {
-      const url = "/api/search/" + this.state.search;
+      
+      let url = "/api/search/" + this.state.search;
 
       fetch(url,
         {method: "GET"})
@@ -83,6 +105,13 @@ class Search extends React.Component {
             name="search"
             value={this.state.search}
           />
+          <br />
+          <br />
+          <br />
+          <PlantForm 
+                    handleChange={this.handleChange}
+                    submitPlant={this.submitPlant}
+                />
           <Modal
             handleClose={this.hideModal}
             show={this.state.showResults}
@@ -101,10 +130,17 @@ class Search extends React.Component {
         <Wrapper>
           <SearchForm
             fetchData={this.fetchData}
-            updateSearchTerm={this.updateSearchTerm}
+            updateSearchTerm={this.handleChange}
             name="search"
             value={this.state.search}
           />
+          <br />
+          <br />
+          <br />
+          <PlantForm 
+                    handleChange={this.handleChange}
+                    submitPlant={this.submitPlant}
+                />
           <Modal
           handleClose={this.hideModal}
           show={this.state.showResults}>
