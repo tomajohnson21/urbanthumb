@@ -32,7 +32,10 @@ export default class LoginModal extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-     }
+
+    
+    fetch("/users/auth")
+    }
 
 
   render() {
@@ -43,12 +46,6 @@ export default class LoginModal extends React.Component {
         <form onSubmit={this.handleSubmit}>
           <ModalHeader>Login</ModalHeader>
           <ModalBody>
-          <div className="row">
-            <div className="form-group col-md-4">
-            <label>Username:</label>
-            <input type="text" value={this.state.name} onChange={this.handleChangeName} className="form-control" placeholder="Username..."/>
-              </div>
-              </div>
             <div className="row">
              <div className="form-group col-md-4">
             <label>Email:</label>
