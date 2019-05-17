@@ -3,6 +3,7 @@ const axios = require("axios");
 
 // Defining methods for the plantsController
 module.exports = {
+  
   findAll: function(req, res) {
     db.Plant
       .find(req.query)
@@ -10,6 +11,7 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
+  
   findById: function(req, res) {
     db.Plant
       .findById(req.params.id)

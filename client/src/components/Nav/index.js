@@ -14,7 +14,7 @@ function TopNav() {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="mr-auto">
-                    <Nav.Link href="/search">Search</Nav.Link>
+                    <Nav.Link href="/new-plant">New Plant</Nav.Link>
                     <Nav.Link href="/profile">Profile</Nav.Link>
                     <Nav.Link href="/login">Log in</Nav.Link>
                     <NavDropdown title="Dropdown" id="collasible-nav-dropdown">

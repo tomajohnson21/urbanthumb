@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Search from './pages/Search';
+import NewPlant from './pages/NewPlant';
 import NoMatch from './pages/NoMatch';
 import TopNav from './components/Nav';
 import Home from '../src/pages/Home';
@@ -26,7 +26,7 @@ class App extends React.Component {
             <TopNav />
             <Switch>
               <Route exact path="/" component={Home} />
-              <Route exact path="/search" component={Search}/>
+              <Route exact path="/new-plant" component={NewPlant}/>
               <Route exact path="/login" component={LoginModal}/>
               <Route exact path='/signup' component={SignUpModal}/>
               <Route exact path='/about' component={About}/>

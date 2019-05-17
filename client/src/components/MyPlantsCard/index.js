@@ -17,7 +17,7 @@ function MyPlantsCard(props) {
                         <img className='myPlantsImg' variant="top" src={rosetest} alt="Rose" />
                         <div>
                             <div className='cardTitle'>{props.commonName}</div>
-                            <h3><i>{props.latinName}</i></h3>
+                            <h3><i>{props.scientificName}</i></h3>
                             <div className="description container">
                                 {props.description}
                             </div>
