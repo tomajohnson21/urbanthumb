@@ -17,7 +17,16 @@ function MyPlantsCard(props) {
                         <h4><i>{props.scientificName}</i></h4>
                     </Card.Title>
                     <Card.Text className='cardTxt'>
-                        {props.description}
+                        Watering Needs: {props.water}
+                    </Card.Text>
+                    <Card.Text className='cardTxt'>
+                        Shade Tolerance: {props.shadeTolerance}
+                    </Card.Text>
+                    <Card.Text className='cardTxt'>
+                        Growing Season: {props.growthPeriod}
+                    </Card.Text>
+                    <Card.Text className='cardTxt'>
+                        Toxic: {props.toxicity}
                     </Card.Text>
                 </Card.Body>
             </Card>
@@ -40,7 +49,16 @@ function MyPlantsCard(props) {
                         <h4><i>{props.scientificName}</i></h4>
                     </Card.Title>
                     <Card.Text className='cardTxt'>
-                        {props.description}
+                        Watering Needs: {props.water}
+                    </Card.Text>
+                    <Card.Text className='cardTxt'>
+                        Shade Tolerance: {props.shadeTolerance}
+                    </Card.Text>
+                    <Card.Text className='cardTxt'>
+                        Growing Season: {props.growthPeriod}
+                    </Card.Text>
+                    <Card.Text className='cardTxt'>
+                        Toxic: {props.toxicity}
                     </Card.Text>
                 </Card.Body>
             </Card>
