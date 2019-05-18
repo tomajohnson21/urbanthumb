@@ -3,9 +3,7 @@
 
 Version ***1.0.0***
 
->Are you an Artist that has a hard time finding gigs and events to network locally in your city? With our web application, artists are not only able to find events going on around their location, but they are also able to apply for a slot in the event to showcase their talent. 
-
->Perhaps you're a venue owner and you're putting on an amazing event to attract new business. Simply create an event in Gig to get the word out to artists. You can then review their application, look at their social media platforms and youtube videos to see if their style is right for your event. 
+>Keep all you need to know about your plants in one place! In addition to plant care tips, enjoy beautiful plant pictures around the world at your urban setting. UrbanThumb helps users identify, learn, and enjoy all kinds of plants. 
 ---
 ### Instructions:
 1. Search for plants using Trefl.io
