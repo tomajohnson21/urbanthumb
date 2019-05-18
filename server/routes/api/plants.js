@@ -1,5 +1,6 @@
 const router = require("express").Router();
 const plantController = require("../../controllers/plantController");
+const parser = require("../../config/cloudinary");
 
 router.route("/")
   .get(plantController.findAll)
@@ -11,7 +12,7 @@ router.route("/:trefl_id")
   // Matches with "/api/books/:id"
 router.route("/:id")
   .get(plantController.findById)
-  .put(plantController.update)
+  .put(parser.single("image"), plantController.update)
   .delete(plantController.remove);
 
 module.exports = router;

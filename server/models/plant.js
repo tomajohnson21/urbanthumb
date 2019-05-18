@@ -8,6 +8,7 @@ const plantSchema = new Schema({
   shade_tolerance: String,
   growth_period: String,
   toxicity: String,
+  image_url: String,
   date: { type: Date, default: Date.now }
 });
 

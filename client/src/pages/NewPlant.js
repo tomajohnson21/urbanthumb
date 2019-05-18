@@ -30,7 +30,7 @@ class Search extends React.Component {
   }
   
   hideModal = () => {
-    this.setState({ showResults: false });
+    this.setState({ showResults: false, hasResults: false });
   }
 
   handleChange = (event) => {
