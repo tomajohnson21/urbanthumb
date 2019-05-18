@@ -21,11 +21,11 @@ export default class AboutCard extends React.Component {
                             <div>
                                 <div className='cardTitle'>Tom</div>
                                 <div>
-                                    Some quick example text to build on the card title and make up the bulk of
-                                    the card's content.
-                        </div>
-                                <a href="https://www.github.com" target="_blank" className="fa fa-github faAbout"></a>
-                                <a href="https://www.linkedin.com/" target="_blank" className="fa fa-linkedin faAbout"></a>
+                                Full-stack Web Developer who loves working with backend technologies and 
+                                developing software using Python and the MERN stack
+                              </div>
+                                <a href="https://www.github.com/tomajohnson21/" target="_blank" className="fa fa-github"></a>
+                                <a href="https://www.linkedin.com/" target="_blank" className="fa fa-linkedin"></a>
                             </div>
                         </div>
                     </div>

@@ -5,6 +5,7 @@ import Modal from '../components/Modal'
 import ResultContainer from '../components/ResultContainer';
 import ResultCard from '../components/ResultCard';
 import ResultFail from '../components/ResultFail';
+import PlantForm from '../components/PlantForm';
 
 class Search extends React.Component {
   
@@ -13,6 +14,11 @@ class Search extends React.Component {
     hasResults: false,
     showResults: false,
     search: "",
+    common_name: "",
+    scientific_name: "",
+    water: "",
+    shade_tolerance: "",
+    toxicity: "",
     results: []
   }
 
@@ -24,12 +30,33 @@ class Search extends React.Component {
     this.setState({ showResults: false });
   }
 
-  updateSearchTerm = (event) => {
+  handleChange = (event) => {
 
-    const {name, value} = event.target
+    const {name, value} = event.target;
+
     this.setState({
       [name]: value
-    })
+    });
+  }
+
+  submitPlant = (event) => {
+
+      event.preventDefault();
+    
+      let newPlant = {
+        common_name: this.state.common_name,
+        scientific_name: this.state.scientific_name,
+        water: this.state.water,
+        shade_tolerance: this.state.shade_tolerance,
+        toxicity: this.state.toxicity
+      }
+      console.log(newPlant);
+  }
+
+  handlePlantClick = (plant) => {
+
+    
+    console.log(plant);
   }
 
   fetchData = (event) => {
@@ -39,13 +66,14 @@ class Search extends React.Component {
     if(!this.state.search){
       console.log("No search term :(")
     } else {
-      const url = "http://localhost:3001/api/search/" + this.state.search;
+      
+      let url = "/api/search/" + this.state.search;
 
-      fetch(url)
+      fetch(url,
+        {method: "GET"})
       .then(res => res.json())
       .then(
         (results) => {
-          console.log(results)
           this.setState({
             results
           })
@@ -68,6 +96,7 @@ class Search extends React.Component {
   render(){
 
     if(!this.state.hasResults){
+      
       return(
         <Wrapper>
           <SearchForm
@@ -76,6 +105,13 @@ class Search extends React.Component {
             name="search"
             value={this.state.search}
           />
+          <br />
+          <br />
+          <br />
+          <PlantForm 
+                    handleChange={this.handleChange}
+                    submitPlant={this.submitPlant}
+                />
           <Modal
             handleClose={this.hideModal}
             show={this.state.showResults}
@@ -89,14 +125,22 @@ class Search extends React.Component {
         </Wrapper>
       )
     } else {
+
       return (
         <Wrapper>
           <SearchForm
             fetchData={this.fetchData}
-            updateSearchTerm={this.updateSearchTerm}
+            updateSearchTerm={this.handleChange}
             name="search"
             value={this.state.search}
           />
+          <br />
+          <br />
+          <br />
+          <PlantForm 
+                    handleChange={this.handleChange}
+                    submitPlant={this.submitPlant}
+                />
           <Modal
           handleClose={this.hideModal}
           show={this.state.showResults}>
@@ -104,7 +148,10 @@ class Search extends React.Component {
               {this.state.results.map(result =>
               <ResultCard
                 key={this.state.results.indexOf(result)}
+                handlePlantClick={this.handlePlantClick}
+                //plantInfo = {result}
                 commonName={result.common_name}
+                completeData={result.complete_data}
                 scientificName={result.scientific_name}
                 href={result.link}
               />)}

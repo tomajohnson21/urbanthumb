@@ -10,7 +10,6 @@ function MyPlantsCard(props) {
 
 
     return (
-
         <CardGroup className='cardGroup'>
             <Card>
                 <Card.Body className='leftCardBody'>
@@ -31,13 +30,7 @@ function MyPlantsCard(props) {
                 </Card.Body>
             </Card>
         </CardGroup>
-
-
-
-
     )
-
-
 }
 
 
