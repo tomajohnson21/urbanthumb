@@ -1,6 +1,10 @@
 .aboutContainer {
+
+
+
     min-width: 250px;
-    margin-top: 25px;
+    margin-top: 100px;
+    
     
     background-attachment: fixed; 
     box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .1);
@@ -35,7 +39,7 @@ section {
     height: 150px;
 }
 
-.card {
+.aboutCard {
     font-family: 'Lato', 'Roboto', Arial, Helvetica, sans-serif;
     color: white;
     margin-top: 20px;
@@ -45,6 +49,7 @@ section {
     background: inherit;
     background-image:inherit;
     min-width: 250px;
+    
 }
 
 .cardTitle {
