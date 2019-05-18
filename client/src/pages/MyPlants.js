@@ -13,10 +13,10 @@ class MyPlants extends React.Component {
         // search: "",
         results: [
             {
-                commonName: "Rose",
-                latinName: "Plebeus Rosius",
+                commonName: "Sansevieria",
+                latinName: "Sansevieria hyacinthoides",
                 image: { rosetest },
-                description: "this is a rose this is a rose this is a rose this is a rose this is a rose this is a rose this is a rose this is a rose this is a rose this is a rose this is a rose",
+                description: "There is great variation within the genus, and species range from succulent desert plants such as Sansevieria pinguicula to thinner leafed tropical plants such as Sansevieria trifasciata. Plants often form dense clumps from a spreading rhizome or stolons.",
 
             }
         ],

@@ -1,6 +1,19 @@
 import React from 'react';
-import Wrapper from '../components/Wrapper';
-import ControlledCarousel from '../components/Carousel';
+import Background from '../static/BGUrbanThumb.jpg';
+import styled from 'styled-components';
+import TopNav from '../components/Nav/index';
+
+const NewWrapper = styled.div`
+background-image: url(${Background});
+
+background-size: 100%;
+
+text-align: center;
+ 
+min-height: 100vh;
+background-size: cover;
+background-repeat: no-repeat;
+`
 
 class Home extends React.Component {
 
@@ -10,17 +23,13 @@ class Home extends React.Component {
           modalShow: false,
         }
       }
+
+
     render() {
         return (
-            <Wrapper>
-
-                <h1>Title</h1>
-                <h5><i>slogan or more filler text.....</i></h5>
-                
-                <ControlledCarousel />
-
-                
-            </Wrapper>
+          <NewWrapper>
+          <TopNav />
+          </NewWrapper>
         )
     }
 

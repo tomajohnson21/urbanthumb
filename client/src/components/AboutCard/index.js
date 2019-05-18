@@ -24,8 +24,8 @@ export default class AboutCard extends React.Component {
                                     Some quick example text to build on the card title and make up the bulk of
                                     the card's content.
                         </div>
-                                <a href="https://www.github.com" target="_blank" className="fa fa-github"></a>
-                                <a href="https://www.linkedin.com/" target="_blank" className="fa fa-linkedin"></a>
+                                <a href="https://www.github.com" target="_blank" className="fa fa-github faAbout"></a>
+                                <a href="https://www.linkedin.com/" target="_blank" className="fa fa-linkedin faAbout"></a>
                             </div>
                         </div>
                     </div>
@@ -38,8 +38,8 @@ export default class AboutCard extends React.Component {
                                     Some quick example text to build on the card title and make up the bulk of
                                     the card's content.
                         </div>
-                                <a href="https://www.github.com" target="_blank" className="fa fa-github"></a>
-                                <a href="https://www.linkedin.com/" target="_blank" className="fa fa-linkedin"></a>
+                                <a href="https://www.github.com" target="_blank" className="fa fa-github faAbout"></a>
+                                <a href="https://www.linkedin.com/" target="_blank" className="fa fa-linkedin faAbout"></a>
                             </div>
                         </div>
                     </div>
@@ -52,8 +52,8 @@ export default class AboutCard extends React.Component {
                                     Some quick example text to build on the card title and make up the bulk of
                                     the card's content.
                         </div>
-                                <a href="https://www.github.com" target="_blank" className="fa fa-github"></a>
-                                <a href="https://www.linkedin.com/" target="_blank" className="fa fa-linkedin"></a>
+                                <a href="https://www.github.com" target="_blank" className="fa fa-github faAbout"></a>
+                                <a href="https://www.linkedin.com/" target="_blank" className="fa fa-linkedin faAbout"></a>
                             </div>
                         </div>
                     </div>

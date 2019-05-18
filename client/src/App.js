@@ -9,6 +9,23 @@ import LoginModal from './components/LoginModal';
 import SignUpModal from './components/SignUp/index';
 import About from './pages/About';
 import MyPlants from './pages/MyPlants';
+import styled from 'styled-components';
+
+
+import Background from './static/BGUrbanThumb.jpg';
+
+
+const NewWrapper = styled.div`
+// background-repeat: no-repeat
+// height: 500px;
+background-size: cover;
+// margin: auto, auto;
+text-align: center;
+// background-attachment: fixed;
+// background-position: center; 
+min-height: 100vh;
+background-size: cover;
+background-repeat: no-repeat;`
 
 class App extends React.Component {
 
@@ -21,9 +38,13 @@ class App extends React.Component {
   render() {
     return (
       <div>
+       
+        
         <Router>
-          <div>
+            
             <TopNav />
+            
+            
             <Switch>
               <Route exact path="/" component={Home} />
               <Route exact path="/search" component={Search}/>
@@ -33,7 +54,6 @@ class App extends React.Component {
               <Route exact path='/myplants' component={MyPlants}/>
               <Route component={NoMatch} />
             </Switch>
-          </div>
         </Router>
         <FooterPage />
       </div>
