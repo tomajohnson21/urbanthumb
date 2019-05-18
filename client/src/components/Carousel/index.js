@@ -30,7 +30,6 @@ class ControlledCarousel extends React.Component {
   
       return (
         <Carousel
-          className='col-12'
           activeIndex={index}
           direction={direction}
           onSelect={this.handleSelect}

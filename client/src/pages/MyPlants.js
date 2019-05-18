@@ -17,7 +17,6 @@ class MyPlants extends React.Component {
     }
 
     loadPlants = () => {
-
         fetch("/api/plants",
         {method: "GET"})
         .then(res => res.json)
