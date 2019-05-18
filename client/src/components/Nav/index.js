@@ -50,13 +50,13 @@ function TopNav() {
 
             <a className="active faText" href="/"><i class="fa fa-fw fa-home"></i>Home</a>
 
-            <a className="active faText" href="/search"><i class="fa fa-fw fa-search"></i>Search</a>
+            <a className="active faText" href="/newplant"><i class="fa fa-fw fa-search"></i>Search</a>
 
             <a className="active faText" href="/myplants"><i class="fa fa-fw fa-leaf"></i>MyPlant</a>
 
             <a className="active faText" href="/login"><i class="fa fa-fw fa-user"></i>Login</a>
 
-            <a className="active faText" href="/aboutMe"><i class="fa fa-fw fa-users"></i>Team</a>
+            <a className="active faText" href="/about"><i class="fa fa-fw fa-users"></i>Team</a>
             {/* <a href="/search">
             <div>
           <Icon style={{backgroundImage: `url(${require('./search.png')})`}}/>

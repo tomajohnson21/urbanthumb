@@ -1,5 +1,4 @@
 import React from 'react';
-import rosetest from '../assets/rosetest.jpg';
 import MyPlantCard from '../components/MyPlantsCard';
 import Wrapper from '../components/Wrapper';
 import NoPlants from '../components/NoPlants';
@@ -20,8 +19,9 @@ class MyPlants extends React.Component {
     loadPlants = () => {
         fetch("/api/plants",
         {method: "GET"})
-        .then(res => res.json)
+        .then(res => res.json())
         .then((results) => {
+            console.log(results)
             this.setState({
               results
             })
@@ -43,12 +43,15 @@ class MyPlants extends React.Component {
         if (this.state.hasResults) {
             return (
                 <Wrapper>
-                    {this.state.results.map(results =>
+                    {this.state.results.map(plant =>
                     <MyPlantCard
-                        commonName={results.commonName} 
-                        latinName={results.latinName}
-                        image={results.image}
-                        description={results.description}
+                        commonName={plant.common_name} 
+                        scientificName={plant.scientific_name}
+                        growthPeriod={plant.growth_period}
+                        water={plant.water}
+                        toxicity={plant.toxicity}
+                        shadeTolerance={plant.shade_tolerance}
+                        image={plant.image}
                     />)}
                 </Wrapper>
 
