@@ -15,7 +15,7 @@ export default class AboutCard extends React.Component {
 
             <Card className='container aboutContainer'>
                 <div className='row this'>
-                    <div className='col card'>
+                    <div className='col aboutCard'>
                         <div>
                             <img className='aboutImg' variant="top" src={Tom} alt="Tom" />
                             <div>
@@ -29,28 +29,26 @@ export default class AboutCard extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <div className='col card'>
+                    <div className='col aboutCard'>
                         <div>
                             <img className='aboutImg' variant="top" src={Sheima} alt="Sheima" />
                             <div>
                                 <div className='cardTitle'>Sheima</div>
                                 <div>
-                                    Some quick example text to build on the card title and make up the bulk of
-                                    the card's content.
+                                Graphic & Web Designer with broad experience in Marketing, Brand Management & Print Design. Curious by nature, results driven.
                         </div>
                                 <a href="https://www.github.com" target="_blank" className="fa fa-github faAbout"></a>
                                 <a href="https://www.linkedin.com/" target="_blank" className="fa fa-linkedin faAbout"></a>
                             </div>
                         </div>
                     </div>
-                    <div className='col card'>
+                    <div className='col aboutCard'>
                         <div>
                             <img className='aboutImg' variant="top" src={Kevin} alt="Sheima" />
                             <div>
                                 <div className='cardTitle'>Kevin</div>
                                 <div>
-                                    Some quick example text to build on the card title and make up the bulk of
-                                    the card's content.
+                                Full-Stack developer and aspiring Product Manager with a foundation in Business Operations, Ecommerce and Inventory Management systems.
                         </div>
                                 <a href="https://www.github.com" target="_blank" className="fa fa-github faAbout"></a>
                                 <a href="https://www.linkedin.com/" target="_blank" className="fa fa-linkedin faAbout"></a>
