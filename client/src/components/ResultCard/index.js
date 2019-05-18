@@ -6,7 +6,7 @@ function ResultCard(props) {
     const plant_id = props.plant_id
 
         return(
-            <div className="card">
+            <div className="resultCard">
                 <h3>{props.commonName}</h3>
                 <h5><i>{props.scientificName}</i></h5>
                 <button className={buttonClass} onClick={() => props.handlePlantClick(plant_id)}>

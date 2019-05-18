@@ -1,5 +1,6 @@
 .formContainer {
     background: rgb(7, 26, 40);
+    width: 75%;
     color: white;
     font-family: 'Lato', 'Roboto', Arial, Helvetica, sans-serif;
 
@@ -8,4 +9,14 @@
 .label {
     font-family: 'Lato', 'Roboto', Arial, Helvetica, sans-serif;
     background-color: rgb(7, 26, 4)0;
+}
+
+.plantFormHeader {
+    font-family: 'Lato', 'Roboto', Arial, Helvetica, sans-serif;
+    text-align: left;
+    
+}
+
+.customPlantButton {
+    margin-right: 20px;
 }

@@ -16,6 +16,7 @@ import Background from './static/BGUrbanThumb.jpg';
 
 
 const NewWrapper = styled.div`
+background-image: url(${Background});
 // background-repeat: no-repeat
 // height: 500px;
 background-size: cover;
@@ -41,7 +42,7 @@ class App extends React.Component {
        
         
         <Router>
-            
+            <NewWrapper>
             <TopNav />
             
             
@@ -54,6 +55,7 @@ class App extends React.Component {
               <Route exact path='/myplants' component={MyPlants}/>
               <Route component={NoMatch} />
             </Switch>
+            </NewWrapper>
         </Router>
         <FooterPage />
       </div>
