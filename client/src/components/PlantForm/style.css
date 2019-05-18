@@ -1,0 +1,11 @@
+.formContainer {
+    background: rgb(7, 26, 40);
+    color: white;
+    font-family: 'Lato', 'Roboto', Arial, Helvetica, sans-serif;
+
+}
+
+.label {
+    font-family: 'Lato', 'Roboto', Arial, Helvetica, sans-serif;
+    background-color: rgb(7, 26, 4)0;
+}

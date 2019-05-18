@@ -1,8 +1,14 @@
 import React from 'react';
+import './style.css';
+import Button from 'react-bootstrap/Button';
 
 function PlantForm(props) {
 
     return(
+
+        <div className='formContainer'>
+
+        <h2>Can't find the plant you're looking for? Create a custom plant here!</h2>
         <div className="md-form mt-0">
             <input className="form-control" name="common_name" value={props.common_name} onChange={props.handleChange} type="text" placeholder="Common Name (Required)" aria-label="Common Name" />
             
@@ -57,7 +63,8 @@ function PlantForm(props) {
                 </form> 
             </label>
             
-            <button onClick={props.submitPlant}>Submit</button>
+            <Button onClick={props.submitPlant}>Submit</Button>
+        </div>
         </div>
     )
 }

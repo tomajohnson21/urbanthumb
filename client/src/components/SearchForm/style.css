@@ -1,0 +1,7 @@
+.searchArea {
+    background: rgb(7, 26, 4, 0);
+}
+
+.searchButton, .searchButton:Hover, .searchButton:Active {
+    background: rgb(7, 26, 4, 0)!important;
+}
