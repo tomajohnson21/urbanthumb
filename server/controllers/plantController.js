@@ -20,6 +20,7 @@ module.exports = {
   },
 
   create: function(req, res) {
+    console.log(req.body);
     db.Plant
       .create(req.body)
       .then(dbModel => res.json(dbModel))

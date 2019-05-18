@@ -6,23 +6,41 @@ function PlantForm(props) {
         <div className="md-form mt-0">
             <input className="form-control" name="common_name" value={props.common_name} onChange={props.handleChange} type="text" placeholder="Common Name (Required)" aria-label="Common Name" />
             
-            <input className="form-control" name="scientific_name" value={props.scientific_name} onChange={props.handleChange} type="text" placeholder="Search" aria-label="Search" />
+            <input className="form-control" name="scientific_name" value={props.scientific_name} onChange={props.handleChange} type="text" placeholder="Scientific Name" aria-label="Scientific Name" />
+
+
+            <input className="form-control" name="growth_period" value={props.growth_period} onChange={props.handleChange} type="text" placeholder="Growth Period" aria-label="Growth Period" />
             
             <br />
             <label>Is this plant tolerant or intolerant to shade?
-                <select className="select-wheel" name="shade_tolerance" value={props.shade_tolerance} onChange={props.handleChange}>
-                    <option value="tolerant">Tolerant</option>
-                    <option value="intolerant">Intolerant</option>
-                </select>
+            <form name="shade_tolerance" value={props.shade_tolerance} onChange={props.handleChange}>
+                    <label>
+                        Tolerant
+                        <input type="radio" name ="shade_tolerance" value="Tolerant" />
+                    </label>
+                    <label>
+                        Intolerant
+                        <input type="radio" name="shade_tolerance" value="Intolerant" />  
+                    </label>
+                </form> 
             </label>
 
             <br />
             <label>What amount of water does this plant need?
-                <select className="select-wheel" name="water" value={props.water} onChange={props.handleChange}>
-                    <option value="high">High</option>
-                    <option value="medium">Medium</option>
-                    <option value="low">Low</option>
-                </select>
+                    <form name="water" value={props.water} onChange={props.handleChange}>
+                    <label>
+                        High
+                        <input type="radio" name ="water" value="High" />
+                    </label>
+                    <label>
+                        Medium
+                        <input type="radio" name="water" value="Medium" />  
+                    </label>
+                    <label>
+                        Low
+                        <input type="radio" name="water" value="Low" />  
+                    </label>
+                </form>
             </label>
 
             <br />
