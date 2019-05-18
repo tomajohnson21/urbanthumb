@@ -1,17 +1,6 @@
 import React from "react";
-import Navbar from 'react-bootstrap/Navbar';
-import Nav from 'react-bootstrap/Nav';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import './style.css';
-import Urbanthumbfinallogo from '../../assets/Urbanthumbfinallogo.png';
 import styled from 'styled-components';
-
-
-//here is your image holder
-const Icon = styled.div`
-height: 55px;
-width: 55px;
-background-repeat: no-repeat;`
 
 //here is your nav bar
 const Bar = styled.div`
@@ -48,15 +37,15 @@ function TopNav() {
           </div>
             </a> */}
 
-            <a className="active faText" href="/"><i class="fa fa-fw fa-home"></i>Home</a>
+            <a className="active faText" href="/"><i className="fa fa-fw fa-home"></i>Home</a>
 
-            <a className="active faText" href="/newplant"><i class="fa fa-fw fa-search"></i>Search</a>
+            <a className="active faText" href="/newplant"><i className="fa fa-fw fa-search"></i>Search</a>
 
-            <a className="active faText" href="/myplants"><i class="fa fa-fw fa-leaf"></i>MyPlant</a>
+            <a className="active faText" href="/myplants"><i className="fa fa-fw fa-leaf"></i>MyPlant</a>
 
-            <a className="active faText" href="/login"><i class="fa fa-fw fa-user"></i>Login</a>
+            <a className="active faText" href="/login"><i className="fa fa-fw fa-user"></i>Login</a>
 
-            <a className="active faText" href="/about"><i class="fa fa-fw fa-users"></i>Team</a>
+            <a className="active faText" href="/about"><i className="fa fa-fw fa-users"></i>Team</a>
             {/* <a href="/search">
             <div>
           <Icon style={{backgroundImage: `url(${require('./search.png')})`}}/>

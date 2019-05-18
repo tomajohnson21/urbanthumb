@@ -1,6 +1,6 @@
 const db = require("../models");
 const axios = require("axios");
-
+const parser = require("../config/cloudinary");
 // Defining methods for the plantsController
 module.exports = {
   
@@ -20,7 +20,6 @@ module.exports = {
   },
 
   create: function(req, res) {
-    console.log(req.body);
     db.Plant
       .create(req.body)
       .then(dbModel => res.json(dbModel))
@@ -28,7 +27,7 @@ module.exports = {
   },
 
   createBySearch: function(req, res) {
-    let url = "http://trefle.io/api/plants/" + req.params.trefl_id +"?token=bHVzQkE1UkJPTGFHVGVQUXdmL1JuQT09"
+    let url = "http://trefle.io/api/plants/" + req.params.trefl_id +"?token=" + process.env.TREFL_KEY
     
     axios(url).then(results =>{
 
@@ -56,11 +55,14 @@ module.exports = {
   },
 
   update: function(req, res) {
+
+    let image_url = req.file.url;
     db.Plant
-      .findOneAndUpdate({ _id: req.params.id }, req.body)
+      .findOneAndUpdate({ _id: req.params.id }, {image_url: image_url})
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
+
   remove: function(req, res) {
     db.Plant
       .findById({ _id: req.params.id })

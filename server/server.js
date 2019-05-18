@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const path = require("path");
 const PORT = process.env.PORT || 3001;
@@ -8,7 +9,9 @@ const mongoose = require("mongoose");
 const passport = require("passport");
 const db = require('./models')
 
-// Define middleware here
+
+
+
 app.use(express.urlencoded({ extended: true }));
 app.use(session({secret: "secretkey", resave: true, saveUnintialized: true}))
 app.use(express.json());

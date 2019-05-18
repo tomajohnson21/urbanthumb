@@ -4,7 +4,7 @@ module.exports = {
     
     searchForPlant: function(req, res) {
 
-        let url = "http://trefle.io/api/plants?token=bHVzQkE1UkJPTGFHVGVQUXdmL1JuQT09&common_name=" + req.params.plant +"&page_size=5";
+        let url = "http://trefle.io/api/plants?token=" + process.env.TREFL_KEY + "&common_name=" + req.params.plant +"&page_size=5";
     
         axios.get(url).then(results => {
             

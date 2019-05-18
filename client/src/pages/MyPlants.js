@@ -17,6 +17,7 @@ class MyPlants extends React.Component {
     }
 
     loadPlants = () => {
+
         fetch("/api/plants",
         {method: "GET"})
         .then(res => res.json())
@@ -38,6 +39,36 @@ class MyPlants extends React.Component {
         )
     }
 
+    imageUpload = (id, event) => {
+
+        event.preventDefault();
+
+        const files = event.target.files
+
+        console.log(id);
+        console.log(files)
+
+        const formData = new FormData();
+
+        const file = files[0];
+
+        formData.append("image", file, file.name);
+
+        console.log(formData);
+
+        let url = "/api/plants/" + id;
+
+        fetch(url, {
+            method: 'PUT',
+            body: formData
+        })
+        .then(res => res.json())
+        .then(images => {
+            console.log(images);
+            this.loadPlants();
+        })
+    }
+
     render() {
 
         if (this.state.hasResults) {
@@ -45,13 +76,16 @@ class MyPlants extends React.Component {
                 <Wrapper>
                     {this.state.results.map(plant =>
                     <MyPlantCard
+                        key={plant._id}
+                        id={plant._id}
                         commonName={plant.common_name} 
                         scientificName={plant.scientific_name}
                         growthPeriod={plant.growth_period}
                         water={plant.water}
                         toxicity={plant.toxicity}
                         shadeTolerance={plant.shade_tolerance}
-                        image={plant.image}
+                        imageUrl={plant.image_url}
+                        imageUpload={this.imageUpload}
                     />)}
                 </Wrapper>
 
