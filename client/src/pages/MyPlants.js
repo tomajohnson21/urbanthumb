@@ -1,5 +1,4 @@
 import React from 'react';
-import rosetest from '../assets/rosetest.jpg';
 import MyPlantCard from '../components/MyPlantsCard';
 import Wrapper from '../components/Wrapper';
 import NoPlants from '../components/NoPlants';

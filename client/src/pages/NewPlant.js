@@ -51,12 +51,42 @@ class Search extends React.Component {
         toxicity: this.state.toxicity
       }
       console.log(newPlant);
+
+      fetch("/api/plants",
+        {
+          method: "POST",
+          body: {newPlant}
+        }
+        )
+      .then(res => res.json())
+      .then(
+        (results) => {
+          
+        },
+        (error) => {
+          console.log(error)
+        }
+      )
   }
 
-  handlePlantClick = (plant) => {
+  handlePlantClick = (plant_id) => {
 
     
-    console.log(plant);
+    console.log(plant_id);
+    let url = "/api/plants/" + plant_id;
+
+    fetch(url,
+      {method: "POST"}
+      )
+    .then(res => res.json())
+    .then(
+      (results) => {
+        
+      },
+      (error) => {
+        console.log(error)
+      }
+    )
   }
 
   fetchData = (event) => {
@@ -101,7 +131,7 @@ class Search extends React.Component {
         <Wrapper>
           <SearchForm
             fetchData={this.fetchData}
-            updateSearchTerm={this.updateSearchTerm}
+            updateSearchTerm={this.handleChange}
             name="search"
             value={this.state.search}
           />
@@ -150,6 +180,7 @@ class Search extends React.Component {
                 key={this.state.results.indexOf(result)}
                 handlePlantClick={this.handlePlantClick}
                 //plantInfo = {result}
+                plant_id={result.id}
                 commonName={result.common_name}
                 completeData={result.complete_data}
                 scientificName={result.scientific_name}
