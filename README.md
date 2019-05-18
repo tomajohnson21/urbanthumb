@@ -4,12 +4,19 @@
 Version ***1.0.0***
 
 >Keep all you need to know about your plants in one place! In addition to plant care tips, enjoy beautiful plant pictures around the world at your urban setting. UrbanThumb helps users identify, learn, and enjoy all kinds of plants. 
----
-### Instructions:
-1. Search for plants using Trefl.io
 
 ---
----
+
+### Instructions for Using Trefl.io:
+1. Search for plants using Trefl.io search bar
+2. Save plants to database if data is available
+3. Upload a picture of plant on MyPlants page
+
+### Instructions for Using Manual Upload:
+1. Fill out form with information of plant
+2. Submit plant form to database
+3. Upload a picture of plant on MyPlants page
+
 ---
 
 ### Technologies 
