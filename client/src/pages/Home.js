@@ -2,6 +2,7 @@ import React from 'react';
 import Background from '../static/BGUrbanThumb.jpg';
 import styled from 'styled-components';
 import TopNav from '../components/Nav/index';
+import HomeCard from '../components/HomeCard/index';
 
 const NewWrapper = styled.div`
 background-image: url(${Background});
@@ -28,7 +29,9 @@ class Home extends React.Component {
     render() {
         return (
           <NewWrapper>
-          <TopNav />
+
+            <HomeCard />
+          
           </NewWrapper>
         )
     }

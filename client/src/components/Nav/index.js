@@ -20,7 +20,7 @@ display: flex;
 flex-direction: row;
 justify-content: space-around;
 //background-color: purple;
-background-color: rgba(7,26,40, 0.7)`
+background-color: rgb(7,26,40);`
 
 
 function TopNav() {
